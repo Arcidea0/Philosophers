@@ -72,6 +72,6 @@ void				my_exit(t_data *data);
 void				unloking(pthread_mutex_t *mutex);
 int					ft_strcmp(const char *a, const char *b);
 int					ft_strlen(const char *s);
-int				verj(t_data *data);
+int					verj(t_data *data);
 
 #endif
