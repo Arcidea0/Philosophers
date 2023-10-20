@@ -1,12 +1,10 @@
-NAME 	= philo_bonus
+NAME 	= philo
 CC 		= gcc
-CFLAGS 	= -Wall -Wextra -Werror
-SOURCE 	= all_ings.c errors.c init_bonus.c philo_bonus.c utils_bonus.c
+CFLAGS 	= -Wall -Wextra -Werror# -g -fsanitize=thread
+SOURCE 	= errors.c init.c lft.c philosophers.c utils.c
 OBJS	= $(patsubst %.c, %.o, $(SOURCE))
 
 all:$(NAME)
-
-bonus:$(NAME)
 
 $(NAME) : $(OBJS)
 	$(CC)  $(CFLAGS) -pthread $(OBJS) -o $(NAME)
@@ -22,4 +20,4 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 
-PHONY: all re clean fclean bonus
+PHONY: all re clean fclean $(NAME)
