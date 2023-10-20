@@ -41,11 +41,11 @@ int	ft_strcmp(const char *a, const char *b)
 	return (0);
 }
 
-void	verj(t_data *data)
+int	verj(t_data *data)
 {
 	pthread_mutex_lock(&data->print);
 	printf("The simulation is stoped!\n");
 	my_usleep(90);
 	my_exit(data);
-	// exit (0);
+	return (1);
 }
