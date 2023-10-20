@@ -43,7 +43,8 @@ int	checker(t_data *data)
 	while (1)
 	{
 		if (data->notepme != -1 && all_are_eaten(data) == 1)
-			verj(data);
+			if (verj(data))
+				return (1);
 		i = -1;
 		while (++i < data->number_of_philosophers)
 		{
